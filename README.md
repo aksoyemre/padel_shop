@@ -35,7 +35,46 @@ Büyük spor markalarıyla (raket, ayakkabı) **rekabet etmiyoruz**. Onların b�
 
 ## 2. Ürün Haritası
 
-Kategoriler, en çok "gerekli"den en çok "hediyelik"e doğru sıralı.
+Kategoriler, en çok "gerekli"den en çok "hediyelik"e doğru sıralı. En üstte, satışın omurgasını oluşturacak **Temel Seri** var.
+
+### Temel Seri: ilk akla gelen, ama iyi yapılmış
+Yaratıcı ürünler markayı konuşturur, ama cironun büyük kısmını tanıdık ürünler getirir. Bunları "logo basılmış merch" gibi değil, minimal ve tasarım odaklı yapıyoruz.
+
+**Kural:** Tek ikon ya da tek cümle. Büyük logo yok. Kaliteli taban ürün (ağır gramaj pamuk, nakış, iyi ambalaj).
+
+**İkon seti** (tüm seride tekrar eder):
+- Raket ikonu: delikli kafa, kısa sap, padel raketi olduğu ilk bakışta anlaşılır
+- Kort planı: kuşbakışı 10 × 20 m kort, servis çizgileri fileden 6,95 m'de
+- Top: dikişli top ikonu
+- "4" amblemi: dördüncü oyuncu
+
+| Ürün | Tasarım |
+|---|---|
+| Tişört | Sol göğüste küçük nakış raket ikonu |
+| Tişört | Göğüste ince çizgi kort planı |
+| Sweatshirt / hoodie | Göğüste raket ikonu, sırtta küçük "4" |
+| Şapka | Ön panelde mini raket nakışı |
+| Çorap | Bilekte servis çizgisi deseni |
+| Bez çanta | Kort planı ("Raket sığmaz, gerisi sığar.") |
+| Anahtarlık | Gerçek raketin 1:8 minyatürü, delikli yüzeyli |
+| Sticker seti | 12 ikon, mat vinil |
+| Havlu | Tek cümle: **"Oops, was it out?"** |
+
+### Slogan bankası
+Havlu, matara, kupa, tişört ve bileklik üzerinde kullanılacak kısa cümleler. Padelciler kortta İngilizce/İspanyolca terimlerle konuştuğu için İngilizce ve Türkçe karışık.
+
+| Slogan | Nereye yakışır | Neden işe yarar |
+|---|---|---|
+| Oops, was it out? | Havlu | Her maçta yaşanan "out muydu?" tartışması |
+| Sorry partner. | Terbandı | Fileye takılan top sonrası söylenen klasik özür |
+| Glass half full. | Matara | Padel camı + iyimserlik kelime oyunu |
+| BENDE! / SENDE! | Partner tişört seti | Kortta en çok bağırılan iki kelime; çift olarak satılır |
+| Just one more set. | Kupa | Gece 23:40'ta hâlâ kortta olanlar |
+| I lob you. | Bez çanta, kart | Sevgililer Günü / hediye |
+| Por tres club | Şapka | Topu yan çitten dışarı atanların gururu |
+| Golden point person | Pin, tişört | 40–40'ta topu isteyen oyuncu |
+| Duvar haklıydı. | Sticker | Camdan dönen topu kaçıranlara |
+| Dördüncü kişi bulundu. | Marka mottosu | Herkes hep dördüncüyü arar |
 
 ### A. Acil durum & sarf malzemesi (otomatın kalbi)
 - 3'lü top tüpü (2–3 farklı marka)
@@ -167,7 +206,26 @@ Hedef: Corner'da sepet ortalamasını giriş ürünleri yükseltir, marjı ise o
 
 ---
 
-## 8. Açık Sorular
+## 8. E-ticaret Prototipi (`site/`)
+
+Marka imajını öne çıkaran, bağımlılıksız statik bir prototip. Ödeme ve formlar demo amaçlıdır, hiçbir yere veri gönderilmez.
+
+```bash
+python3 -m http.server 8000 -d site
+# http://localhost:8000
+```
+
+- **Ana sayfa:** Canlı kort animasyonu (dördüncü oyuncu katılır, ralli başlar), Temel Seri, koleksiyonlar, slogan duvarı, kort dili sözlüğü, kanallar (corner / otomat / online), Padel Pasaportu ve kulüp başvuru formu
+- **Mağaza:** `#magaza`, koleksiyon filtreleri (`#magaza-temel` vb.) ve fiyat sıralaması
+- **Ürün sayfası:** `#urun-<id>`, renk seçince ürün görseli değişir, beden seçimi
+- **Sepet ve ödeme:** `#odeme`, "Kulübüne teslim" (ücretsiz) veya eve kargo, hediye paketi ve not
+- **Dosyalar:** Katalog `site/products.js`, ürün çizimleri `site/art.js` (fotoğraf çekimi gelene kadar SVG), uygulama `site/app.js`
+
+Marka adı "Dördüncü Oyuncu" çalışma adıdır. Fiyatlar ve pilot kulüp isimleri yer tutucudur.
+
+---
+
+## 9. Açık Sorular
 
 - Marka adı ve görsel kimlik
 - Üretim: hazır alım / private label / kendi tasarımımız oranı

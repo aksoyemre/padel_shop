@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dördüncü Oyuncu</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Padel kulüplerinin içindeki küçük dükkân. Kortta unuttuğun, kortta lazım olan ve padelciye hediye edilecek her şey.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Martian+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="proto-bar"><div class="wrap">Prototip · Siparişler ve formlar hiçbir yere gönderilmez, ödeme alınmaz.</div></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#" aria-label="Dördüncü Oyuncu ana sayfa">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="var(--ball)"/>
+        <path d="M9 6.5 Q21 20 9 33.5" fill="none" stroke="var(--ball-ink)" stroke-opacity=".35" stroke-width="2"/>
+        <text x="23" y="21" text-anchor="middle" dominant-baseline="central" font-family="'Big Shoulders Display', Impact, sans-serif" font-weight="900" font-size="26" fill="var(--ball-ink)">4</text>
+      </svg>
+      <span class="logo-word">Dördüncü<br>Oyuncu</span>
+    </a>
+    <nav class="nav" aria-label="Ana menü">
+      <a href="#magaza" data-nav="magaza">Mağaza</a>
+      <a href="#koleksiyonlar" class="nav-wide">Koleksiyonlar</a>
+      <a href="#kort-dili" class="nav-wide">Kort Dili</a>
+      <a href="#kulupler" class="nav-wide">Kulüpler</a>
+    </nav>
+    <button class="cart-btn" id="cart-open" type="button" aria-controls="drawer">
+      Sepet <span class="cart-count" id="cart-count">0</span>
+    </button>
+  </div>
+</header>
+
+<main id="view"></main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="footer-word">Dördüncü Oyuncu</span>
+      <p>Padel kulüplerinin içindeki küçük dükkân. Corner, otomat ve online.</p>
+    </div>
+    <nav class="footer-links" aria-label="Alt menü">
+      <a href="#magaza">Mağaza</a>
+      <a href="#magaza-kit">Unuttum Kiti</a>
+      <a href="#pasaport">Padel Pasaportu</a>
+      <a href="#kulupler">Kulübüne corner</a>
+    </nav>
+    <p class="footer-fine">© 2026 Dördüncü Oyuncu · Çalışma adı · Prototip</p>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Sepet" aria-hidden="true">
+  <div class="drawer-head">
+    <h2>Sepetin</h2>
+    <button class="icon-btn" id="cart-close" type="button" aria-label="Sepeti kapat">✕</button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+  <div class="drawer-foot" id="drawer-foot"></div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="products.js"></script>
+<script src="art.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
