@@ -98,10 +98,10 @@
       variants: [C.beyaz, C.kort, C.siyah], channels: ['corner', 'online'],
     },
     {
-      id: 'bende-sende-set', col: 'mizah', name: 'BENDE! / SENDE! Partner Seti', price: 2290, badge: 'Hediye',
-      line: 'İki tişört. "Kimdeydi?" tartışması biter.',
-      desc: 'Biri BENDE!, diğeri SENDE! yazan iki tişört, hediye kutusunda. Partnerine, eşine ya da her maç aynı topa giden arkadaşına.',
-      art: { type: 'partner' }, tile: 'ball',
+      id: 'mia-tuya-set', col: 'mizah', name: '¡MÍA! / ¡TUYA! Partner Seti', price: 2290, badge: 'Hediye',
+      line: 'Benim. Senin. Kortta en çok bağırılan iki kelime.',
+      desc: 'Biri ¡MÍA! ("benim"), diğeri ¡TUYA! ("senin") yazan iki tişört, hediye kutusunda. Göğüste 10 cm\'lik küçük baskı: beyaz tişörtte siyah, siyah tişörtte kırık beyaz. %100 pamuk, 220 gr.',
+      photos: ['img/mia-tuya.jpg', 'img/mia.jpg', 'img/tuya.jpg'], tile: 'slate',
       sizes: ['S + S', 'S + M', 'M + M', 'M + L', 'L + L', 'L + XL'], channels: ['corner', 'online'],
     },
     {
@@ -217,6 +217,8 @@
       def: 'Lob. Filedeki rakibin başının üzerinden arka cama atılan yüksek top. İyi bir globo fileyi el değiştirtir.' },
     { id: 'golden-point', term: 'Golden point', lang: 'en', say: 'gol·dın poynt', lit: 'altın sayı', product: 'golden-point-pin',
       def: '40–40\'ta avantaj oynanmaz. Tek sayı oyunu bitirir; karşılayan çift hangi taraftan karşılayacağını seçer.' },
+    { id: 'mia-tuya', term: '¡Mía! ¡Tuya!', say: 'mi·a · tu·ya', lit: 'benim · senin', product: 'mia-tuya-set',
+      def: 'Ortadan gelen topun kimde olduğunu söyleyen iki kelime. Kimse söylemezse ikisi de bakar, top aradan geçer.' },
     { id: 'bajada', term: 'Bajada', say: 'ba·ha·da', lit: 'iniş', product: 'ikon-tisort',
       def: 'Arka camdan yükselerek dönen topu havadayken, hücum için sertçe vurmak.' },
     { id: 'contrapared', term: 'Contrapared', say: 'kon·tra·pa·red', lit: 'karşı duvar', product: 'glass-half-full-matara',

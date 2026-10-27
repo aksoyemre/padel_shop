@@ -212,14 +212,10 @@
         + pin(122, 278, COURT, text('CHIQUITA', 0, 0, 22, '#FFFFFF', { ls: 1 }))
         + pin(278, 278, '#FFFFFF', text('GLOBO', 0, 0, 28, NAVY, { ls: 1 }));
     },
-
-    partner: () => {
-      const t = (dx, c, ink, word) => `<g transform="translate(${dx} 70) scale(0.56)">${teeBody(c)}${text(word, 200, 196, 64, ink, { ls: 2 })}</g>`;
-      return t(-6, '#FFFFFF', COURT, 'BENDE!') + t(182, NAVY, BALL, 'SENDE!');
-    },
   };
 
   function render(p, vi = 0) {
+    if (p.photos) return `<img src="${p.photos[0]}" alt="${p.name}" loading="lazy" decoding="async">`;
     const v = (p.variants && p.variants[vi]) || { c: '#FFFFFF', i: NAVY };
     const body = (draw[p.art.type] || (() => ''))(p.art, v);
     return `<svg viewBox="0 0 400 400" role="img" aria-label="${p.name}" style="--art-bg: var(--tile-${p.tile})">`

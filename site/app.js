@@ -144,7 +144,7 @@
     { t: 'Oops, was it out?', id: 'oops-havlu', lang: 'en' },
     { t: 'Sorry partner.', id: 'sorry-partner-bileklik', lang: 'en' },
     { t: 'Glass half full.', id: 'glass-half-full-matara', lang: 'en' },
-    { t: 'Bende! Sende!', id: 'bende-sende-set' },
+    { t: '¡Mía! ¡Tuya!', id: 'mia-tuya-set', lang: 'es' },
     { t: 'Just one more set.', id: 'one-more-set-kupa', lang: 'en' },
   ];
   const COL_COVER = { temel: 'ikon-tisort', mizah: 'oops-havlu', pratik: 'skor-tutucu', kit: 'overgrip-3lu', kulup: 'padel-pasaportu' };
@@ -564,7 +564,10 @@
     view.innerHTML = `<div class="wrap">
       <nav class="crumbs" aria-label="Konum"><a href="#magaza">Mağaza</a><span>/</span><a href="#magaza-${col.id}">${esc(col.name)}</a></nav>
       <div class="pdp">
-        <div class="pdp-art" id="pdp-art">${ART.render(p, 0)}</div>
+        <div class="pdp-media">
+          <div class="pdp-art" id="pdp-art">${ART.render(p, 0)}</div>
+          ${p.photos && p.photos.length > 1 ? `<div class="thumbs" role="group" aria-label="Ürün görselleri">${p.photos.map((src, i) => `<button class="thumb" type="button" data-photo="${i}" aria-pressed="${i === 0}" aria-label="Görsel ${i + 1}"><img src="${src}" alt=""></button>`).join('')}</div>` : ''}
+        </div>
         <div class="pdp-info">
           <div class="card-top"><span class="eyebrow">${esc(col.name)} · ${tagHTML(col)}</span>${p.badge ? `<span class="badge">${esc(p.badge)}</span>` : ''}</div>
           <h1 class="pdp-title">${nameHTML(p)}</h1>
@@ -599,6 +602,10 @@
       view.querySelectorAll('[data-v]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
       $('#v-name').textContent = p.variants[st.v].n;
       $('#pdp-art').innerHTML = ART.render(p, st.v);
+    }));
+    view.querySelectorAll('[data-photo]').forEach((b) => b.addEventListener('click', () => {
+      view.querySelectorAll('[data-photo]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      $('#pdp-art').innerHTML = `<img src="${p.photos[Number(b.dataset.photo)]}" alt="${esc(p.name)}">`;
     }));
     view.querySelectorAll('[data-size]').forEach((b) => b.addEventListener('click', () => {
       st.size = b.dataset.size;

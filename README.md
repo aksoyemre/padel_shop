@@ -68,7 +68,7 @@ Havlu, matara, kupa, tişört ve bileklik üzerinde kullanılacak kısa cümlele
 | Oops, was it out? | Havlu | Her maçta yaşanan "out muydu?" tartışması |
 | Sorry partner. | Terbandı | Fileye takılan top sonrası söylenen klasik özür |
 | Glass half full. | Matara | Padel camı + iyimserlik kelime oyunu |
-| BENDE! / SENDE! | Partner tişört seti | Kortta en çok bağırılan iki kelime; çift olarak satılır |
+| ¡MÍA! / ¡TUYA! | Partner tişört seti | İspanyolca "benim / senin": kortta en çok bağırılan iki kelime. Çift olarak satılır, göğüste 10 cm'lik minimal baskı |
 | Just one more set. | Kupa | Gece 23:40'ta hâlâ kortta olanlar |
 | I lob you. | Bez çanta, kart | Sevgililer Günü / hediye |
 | Por tres club | Şapka | Topu yan çitten dışarı atanların gururu |
@@ -220,6 +220,7 @@ python3 -m http.server 8000 -d site
 - **Ürün sayfası:** `#urun-<id>`, renk seçince ürün görseli değişir, beden seçimi
 - **Sepet ve ödeme:** `#odeme`, "Kulübüne teslim" (ücretsiz) veya eve kargo, hediye paketi ve not
 - **Dosyalar:** Katalog `site/products.js`, ürün çizimleri `site/art.js` (fotoğraf çekimi gelene kadar SVG), uygulama `site/app.js`
+- **Gerçekçi tişört görselleri:** `tools/render_tees.py` (numpy + scipy + Pillow), ¡MÍA! / ¡TUYA! setinin flat-lay mockup'larını `site/img/` altına üretir. Yazı, renk ve yerleşim betiğin sonunda değiştirilebilir. Font: Schibsted Grotesk (SIL Open Font License).
 
 Marka adı "Dördüncü Oyuncu" çalışma adıdır. Fiyatlar ve pilot kulüp isimleri yer tutucudur.
 
